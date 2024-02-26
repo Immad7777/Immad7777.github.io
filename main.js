@@ -1,6 +1,8 @@
-    const namebutton = document.getElementById("myBtn");
-    myBtn.addEventListner("click", function(e){
-        const name = prompt("what is your name");
+document.getElementById("myBtn").onclick = function() {
+    var name = prompt("please enter your name", "")
+    if (name != null && name !="") {
+        document.getElementById("displayname").innerHTML = "Welcome," + name;
+    }
+};
 
-        document.body.innerHTML = "<h1>welcome," + name + "</h1";
-    })
+
