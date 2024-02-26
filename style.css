@@ -66,3 +66,19 @@ img {
     width: 150px;
     height: auto;
 }
+
+.Zoomed {
+    width: 400px;
+    height: auto;
+}
+
+.Navi {
+    color: burlywood;
+    size: 1in;
+}
+
+nav {
+    color:black ;
+    size: 0.5in;
+    text-underline-position: below;
+}
