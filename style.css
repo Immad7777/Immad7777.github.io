@@ -62,3 +62,7 @@ ol {
     color: gold;
 }
 
+img {
+    width: 400px;
+    height: auto;
+}
