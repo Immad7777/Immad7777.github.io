@@ -20,3 +20,17 @@ function unhighlight() {
     this.getElementsById(Navbar);
     Navbar.classList.toggle("nav");
 }
+
+
+function redirectToPage() {
+    var selectedPage = document.getElementById("Drop_down").value;
+    if (selectedPage === "Home") {
+        window.location.href = "index.html";
+    } else if (selectedPage === "Travel") {
+        window.location.href = "#image.html"; // Change to the correct href for Travel page
+    } else if (selectedPage === "Experience") {
+        window.location.href = "#Experience"; // Change to the correct href for Experience page
+    } else if (selectedPage === "Future plans") {
+        window.location.href = "#Future"; // Change to the correct href for Future Plans page
+    }
+}
