@@ -3,7 +3,196 @@
 <div id="imagePage">
   <h1>Photos of recent travels</h1>
 </div>
-<img src="Cool looking mosque" alt="Masjid in Cantt Lahore Pakistan">
-<img src="Mountain range" alt="Mountain range in islamabad Pakistan">
+
+
+<div id="dropdown">
+  <nav>
+
+       
+          <button class="drop" onmouseover="showDropdown('ecDropdown')" 
+          onmouseout="hideDropdown('ecDropdown')">Menu </button>
+          <div class="dropdown-content" id="ecDropdown" 
+          onmouseover="showDropdown('ecDropdown')" 
+          onmouseout="hideDropdown('ecDropdown')">
+          <div><a href="index.html">Home </a></div>
+          <div><a href="image.html">Traveling Images </a></div>
+          <div><a href="links.html">Quick Links</a></div>
+          </div>
+       
+
+      </div>
+      </nav>
+
+  <img src="Cool looking mosque" alt="Masjid in Cantt Lahore Pakistan">
+  <img src="Mountain range" alt="Mountain range in islamabad Pakistan">
 </head>
+
+
+<body>
+  
+  <style>
+
+    body {
+        font-family: Arial;
+        font-size: 12;
+        background-color: rgb(80, 112, 177);
+    }
+    
+    table, th, td {
+        border: 5px #fff;
+        color: white;
+        border-color: whitesmoke;
+        table-layout: auto;
+        width: auto;
+        border-style: groove;
+    
+    }
+    
+    h1 {
+        color: goldenrod;
+        text-align: center;
+        font-size: 3em;
+        margin-top: 0.5em;
+        margin-bottom: 0.5em;
+        margin-left: 1em;
+        margin-right: 1em;
+        text-align: center;
+        font-weight: bolder;
+    }
+    
+    h2 {
+        color: white;
+        text-align: left;
+        font-size: 2em;
+        margin-top: 0.5em;
+        margin-bottom: 0.5em;
+        margin-right: 1em;
+        text-align: justify;
+    }
+    
+    h3 {
+         color: bisque;
+         text-align: center;
+         text-decoration: underline;
+         text-transform: initial;
+         text-align: justify;
+    }
+    
+    p {
+        font-family: 'Times New Roman', Times, serif;
+        font-size: 2em;
+        color: white;
+    
+    }
+    
+    a {
+    A:link {text-decoration:dotted}
+    A:visited {text-decoration:underline }
+    A:active {text-decoration:blue }
+    A:hover {text-decoration: underline; color: red;}
+    }
+    
+    ol {
+        color: gold;
+    }
+    
+    img {
+        width: 150px;
+        height: auto;
+    }
+    
+    .Zoomed {
+        width: 400px;
+        height: auto;
+    }
+    
+    .Navi {
+        color: burlywood;
+        size: 1in;
+    }
+    
+    nav {
+        color:black ;
+        size: 0.5in;
+        text-underline-position: below;
+    }
+    
+    .dropdown-content { display: none; }
+            .nav-item { cursor: pointer; }
+    </style>
+    
+    <script>
+    document.getElementById("myBtn").onclick = function() {
+        var name = prompt("Please enter your name:", "");
+        if (name != null && name != "") {
+            document.getElementById("Heads").innerHTML = "Hello, " + name;
+        }
+    };
+    
+    
+    document.getElementById("myDP").onclick = function() {
+        var img = this.getElementsByTagName('img')[0];
+        img.classList.toggle("Zoomed");
+    }
+    
+    function highlight() {
+        this.getElementsById(Navbar);
+        Navbar.classList.toggle("Naviin");
+    }
+    
+    function unhighlight() {
+        this.getElementsById(Navbar);
+        Navbar.classList.toggle("nav");
+    }
+    
+    
+    document.getElementById("myBtn").onclick = function() {
+        var name = prompt("Please enter your name:", "");
+        if (name != null && name != "") {
+            document.getElementById("Heads").innerHTML = "Hello, " + name;
+        }
+    };
+    
+    document.getElementById("myDP").onclick = function() {
+        var img = this.getElementsByTagName('img')[0];
+        img.classList.toggle("Zoomed");
+    }
+    
+    function showDropdown(dropdownId) {
+        var dropdown = document.getElementById(dropdownId);
+        dropdown.style.display = 'block';
+    }
+    
+    function showDropdown(dropdownId) {
+        var dropdown = document.getElementById(dropdownId);
+        dropdown.style.display = 'block';
+    }
+    
+    // hide dropdown
+    function hideDropdown(dropdownId) {
+        var dropdown = document.getElementById(dropdownId);
+        dropdown.style.display = 'none';
+    }
+    
+    function showDropdown(dropdownId) {
+        var dropdown = document.getElementById(dropdownId);
+        dropdown.style.display = 'block';
+    }
+    
+    // hide dropdown
+    function hideDropdown(dropdownId) {
+        var dropdown = document.getElementById(dropdownId);
+        dropdown.style.display = 'none';
+    }
+    
+    </script>
+
+
+</body>
+
+
 </html>
+
+
+
+
