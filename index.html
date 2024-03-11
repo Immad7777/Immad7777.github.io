@@ -1,12 +1,24 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <nav>
-            <select onchange="la(this.value)">
-            <option value="disabled selected">where to?</option>
-            <option value="image.html">Travel</option>
-            </select>
-        </nav>
+        <div id="dropdown">
+            <nav>
+        
+                 <a href="index.html">Home </a>
+                    <button class="drop" onmouseover="showDropdown('ecDropdown')" 
+                    onmouseout="hideDropdown('ecDropdown')">Extra curriculars </button>
+                    <div class="dropdown-content" id="ecDropdown" 
+                    onmouseover="showDropdown('ecDropdown')" 
+                    onmouseout="hideDropdown('ecDropdown')">
+                    <div><a href="index.html">Extra curriculars </a></div>
+                    <div><a href="image.html">test </a></div>
+                    </div>
+                 <a href="">References </a>
+                 <a href="">Contact </a>
+        
+                </div>
+                </nav>
+
     <title>Immad Allawala CV</title>
 
 <div id="myDP">
@@ -82,6 +94,71 @@
 </table>
 </div>
 
+<script>
+
+document.getElementById("myBtn").onclick = function() {
+    var name = prompt("Please enter your name:", "");
+    if (name != null && name != "") {
+        document.getElementById("Heads").innerHTML = "Hello, " + name;
+    }
+};
+
+
+document.getElementById("myDP").onclick = function() {
+    var img = this.getElementsByTagName('img')[0];
+    img.classList.toggle("Zoomed");
+}
+
+function highlight() {
+    this.getElementsById(Navbar);
+    Navbar.classList.toggle("Naviin");
+}
+
+function unhighlight() {
+    this.getElementsById(Navbar);
+    Navbar.classList.toggle("nav");
+}
+
+
+document.getElementById("myBtn").onclick = function() {
+    var name = prompt("Please enter your name:", "");
+    if (name != null && name != "") {
+        document.getElementById("Heads").innerHTML = "Hello, " + name;
+    }
+};
+
+document.getElementById("myDP").onclick = function() {
+    var img = this.getElementsByTagName('img')[0];
+    img.classList.toggle("Zoomed");
+}
+
+function showDropdown(dropdownId) {
+    var dropdown = document.getElementById(dropdownId);
+    dropdown.style.display = 'block';
+}
+
+function showDropdown(dropdownId) {
+    var dropdown = document.getElementById(dropdownId);
+    dropdown.style.display = 'block';
+}
+
+// hide dropdown
+function hideDropdown(dropdownId) {
+    var dropdown = document.getElementById(dropdownId);
+    dropdown.style.display = 'none';
+}
+
+function showDropdown(dropdownId) {
+    var dropdown = document.getElementById(dropdownId);
+    dropdown.style.display = 'block';
+}
+
+// hide dropdown
+function hideDropdown(dropdownId) {
+    var dropdown = document.getElementById(dropdownId);
+    dropdown.style.display = 'none';
+}
+</script>
 
 </body>
 

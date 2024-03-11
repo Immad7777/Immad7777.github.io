@@ -82,3 +82,6 @@ nav {
     size: 0.5in;
     text-underline-position: below;
 }
+
+.dropdown-content { display: none; }
+        .nav-item { cursor: pointer; }
