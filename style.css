@@ -1,87 +1,102 @@
-body {
-    font-family: Arial;
-    font-size: 12;
-    background-color: rgb(80, 112, 177);
+/* Resetting default margin and padding */
+body, h1, h2, h3, p, ul, ol, li, table, th, td {
+    margin: 0;
+    padding: 0;
 }
 
-table, th, td {
-    border: 5px #fff;
-    color: white;
-    border-color: whitesmoke;
-    table-layout: auto;
-    width: auto;
-    border-style: groove;
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5; /* Background color for the body */
+}
 
+header {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
 }
 
 h1 {
-    color: goldenrod;
-    text-align: center;
-    font-size: 3em;
-    margin-top: 0.5em;
-    margin-bottom: 0.5em;
-    margin-left: 1em;
-    margin-right: 1em;
-    text-align: center;
-    font-weight: bolder;
-}
-
-h2 {
-    color: white;
-    text-align: left;
-    font-size: 2em;
-    margin-top: 0.5em;
-    margin-bottom: 0.5em;
-    margin-right: 1em;
-    text-align: justify;
-}
-
-h3 {
-     color: bisque;
-     text-align: center;
-     text-decoration: underline;
-     text-transform: initial;
-     text-align: justify;
-}
-
-p {
-    font-family: 'Times New Roman', Times, serif;
-    font-size: 2em;
-    color: white;
-
-}
-
-a {
-A:link {text-decoration:dotted}
-A:visited {text-decoration:underline }
-A:active {text-decoration:blue }
-A:hover {text-decoration: underline; color: red;}
-}
-
-ol {
-    color: gold;
-}
-
-img {
-    width: 150px;
-    height: auto;
-}
-
-.Zoomed {
-    width: 400px;
-    height: auto;
-}
-
-.Navi {
-    color: burlywood;
-    size: 1in;
+    margin: 0;
 }
 
 nav {
-    color:black ;
-    size: 0.5in;
-    text-underline-position: below;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
 }
 
-.dropdown-content { display: none; }
-        .nav-item { cursor: pointer; }
+nav a {
+    color: #fff;
+    text-decoration: none;
+    padding: 0 10px;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+section {
+    padding: 20px;
+    text-align: center; /* Align section content to center */
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto; /* Centering the container */
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Adding a subtle shadow */
+}
+
+.intro {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.btn {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+
+.btn:focus {
+    outline: none;
+}
+
+#myDP {
+    text-align: center; /* Center the image and text */
+    margin-bottom: 20px; /* Add some space below the image */
+}
+
+#myDP img {
+    max-width: 150px; /* Set maximum width for the image */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 50%; /* Apply border-radius to create a circular shape */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+    display: block; /* Ensure the image is displayed as a block element */
+    margin: 0 auto 10px; /* Center the image horizontally and add some space below */
+}
+
+#myName {
+    font-size: 20px; /* Adjust font size as needed */
+    color: #333; /* Set text color */
+}
+
+/* New background styling */
+body {
+    background-color: #f7e9e9; /* Light gray background */
+    background-image: linear-gradient(45deg, #cfc2c2, #cfc2c2); /* Gradient background */
+}
