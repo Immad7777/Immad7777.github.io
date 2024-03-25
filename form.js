@@ -84,7 +84,6 @@ document.querySelector('form').addEventListener('submit', function(e) {
     // Store data in local storage
     localStorage.setItem('formData', JSON.stringify(formData));
 
-    // Optionally, redirect to another page or show a submission success message
     // window.location.href = 'results.html';
     alert('Form data saved!');
 });
