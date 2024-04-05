@@ -78,21 +78,36 @@
     background-color: rgba(255, 255, 255, 0.5); /* Optional: adds a semi-transparent layer to increase text readability */
 }
 
+.download-button {
+    width: 100%;
+    background-color: #008CBA;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 18px;
+}
 
-    @font-face {
-        font-family: 'Hoba';
-        src: url('./Hoba-GOwzg.ttf') format('truetype');
-    }
+.download-button:hover {
+    background-color: #005F6B;
+}
 
-    @font-face {
-        font-family: 'JannaLTBold';
-        src: url('./Janna LT Bold.ttf') format('truetype');
-    }
+@font-face {
+    font-family: 'Hoba';
+    src: url('./Hoba-GOwzg.ttf') format('truetype');
+}
 
-    @font-face {
-        font-family: 'DiwaniLetter';
-        src: url('./Diwani Letter Regular.ttf') format('truetype');
-    }
+@font-face {
+    font-family: 'JannaLTBold';
+    src: url('./Janna LT Bold.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'DiwaniLetter';
+    src: url('./Diwani Letter Regular.ttf') format('truetype');
+}
 </style>
 </head>
 <body>
@@ -122,6 +137,8 @@
     <button onclick="translateText()">Translate and Apply Font</button>
 
     <div id="translatedText">Your translated text will appear here...</div>
+    
+    <button class="download-button" onclick="downloadText()">Download Translated Text</button>
 </div>
 <div>
     <label for="fontSizeSlider">Adjust Font Size:</label>
@@ -129,18 +146,6 @@
 </div>
 
 <script>
-async function translateText() {
-    const textToTranslate = document.getElementById('textToTranslate').value;
-    const font = document.getElementById('fonts').value;
-    
-    // Placeholder for actual translation logic
-    const translatedText = "مثال على نص مترجم"; // This should be replaced with actual translated text
-
-    const displayDiv = document.getElementById('translatedText');
-    displayDiv.textContent = translatedText;
-    displayDiv.style.fontFamily = font;
-}
-
 async function translateText() {
     const textToTranslate = document.getElementById('textToTranslate').value;
     const font = document.getElementById('fonts').value;
@@ -158,6 +163,13 @@ async function translateText() {
     const displayDiv = document.getElementById('translatedText');
     displayDiv.textContent = displayText;
     displayDiv.style.fontFamily = font;
+}
+
+async function downloadText() {
+    const translatedText = document.getElementById('translatedText').textContent;
+    const fileName = "translated_text.txt";
+    const blob = new Blob([translatedText], { type: "text/plain;charset=utf-8" });
+    saveAs(blob, fileName);
 }
 
 document.addEventListener('DOMContentLoaded', function() {
