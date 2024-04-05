@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Text Translator and Font Styler</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 20px;
+        padding: 20px;
+        background-color: #f4f4f4;
+        color: #333;
+    }
+
+    .container {
+        max-width: 600px;
+        margin: auto;
+        background: white;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    label {
+        margin-top: 20px;
+        display: block;
+        font-size: 20px;
+        color: #333;
+    }
+
+    input[type="text"], select {
+        width: 100%;
+        padding: 10px;
+        margin-top: 5px;
+        margin-bottom: 20px;
+        display: inline-block;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+        font-size: 18px;
+    }
+
+    button {
+        width: 100%;
+        background-color: #4CAF50;
+        color: white;
+        padding: 14px 20px;
+        margin: 8px 0;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 18px;
+    }
+
+    button:hover {
+        background-color: #45a049;
+    }
+
+    .image-container {
+    position: relative;
+    width: 100%; /* Adjust based on your preference */
+    height: 400px; /* Adjust based on your preference or the aspect ratio of your image */
+    background-image: url('white_shirt.avif'); /* Path to your image */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#translatedText {
+    position: absolute; /* Positioning it over the image */
+    width: 80%; /* Adjust based on your preference */
+    text-align: center;
+    font-size: 24px; /* Or use the dynamic size from your slider */
+    color: #000; /* Color of your text */
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.5); /* Optional: adds a semi-transparent layer to increase text readability */
+}
+
+
+    @font-face {
+        font-family: 'Hoba';
+        src: url('./Hoba-GOwzg.ttf') format('truetype');
+    }
+
+    @font-face {
+        font-family: 'JannaLTBold';
+        src: url('./Janna LT Bold.ttf') format('truetype');
+    }
+
+    @font-face {
+        font-family: 'DiwaniLetter';
+        src: url('./Diwani Letter Regular.ttf') format('truetype');
+    }
+</style>
+</head>
+<body>
+
+<div class="container">
+    <div>
+        <label for="textToTranslate">Enter English Text:</label>
+        <input type="text" id="textToTranslate" placeholder="Type something...">
+    </div>
+    <div class="image-container">
+        <div id="translatedText">Your translated text will appear here...</div>
+    </div>
+    
+    <div>
+        <label for="fonts">Choose a Font:</label>
+        <div>
+            <label for="fontSizeSlider">Adjust Font Size:</label>
+            <input type="range" id="fontSizeSlider" min="16" max="40" value="24">
+        </div>
+        <select id="fonts">
+            <option value="Hoba">Hoba</option>
+            <option value="JannaLTBold">Janna LT Bold</option>
+            <option value="DiwaniLetter">Diwani Letter</option>
+        </select>
+    </div>
+
+    <button onclick="translateText()">Translate and Apply Font</button>
+
+    <div id="translatedText">Your translated text will appear here...</div>
+</div>
+<div>
+    <label for="fontSizeSlider">Adjust Font Size:</label>
+    <input type="range" id="fontSizeSlider" min="16" max="40" value="24">
+</div>
+
+<script>
+async function translateText() {
+    const textToTranslate = document.getElementById('textToTranslate').value;
+    const font = document.getElementById('fonts').value;
+    
+    // Placeholder for actual translation logic
+    const translatedText = "مثال على نص مترجم"; // This should be replaced with actual translated text
+
+    const displayDiv = document.getElementById('translatedText');
+    displayDiv.textContent = translatedText;
+    displayDiv.style.fontFamily = font;
+}
+
+async function translateText() {
+    const textToTranslate = document.getElementById('textToTranslate').value;
+    const font = document.getElementById('fonts').value;
+    
+    let displayText = textToTranslate;
+    
+    // Detect if the input text is English
+    if (/^[a-zA-Z\s]+$/.test(textToTranslate)) {
+        // Placeholder for translation logic to Arabic
+        // This should be replaced with actual translation if the text is in English
+        displayText = "مثال على نص مترجم"; // Example translated text
+    }
+    // If the text is not English, it's assumed to be Arabic or non-English that doesn't require translation
+    
+    const displayDiv = document.getElementById('translatedText');
+    displayDiv.textContent = displayText;
+    displayDiv.style.fontFamily = font;
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+    const fontSizeSlider = document.getElementById('fontSizeSlider');
+    const translatedTextDiv = document.getElementById('translatedText');
+
+    // Function to update font size
+    function updateFontSize() {
+        const newSize = fontSizeSlider.value + 'px';
+        translatedTextDiv.style.fontSize = newSize;
+    }
+
+    // Initial set to match the slider's default value
+    updateFontSize();
+
+    // Event listener for slider changes
+    fontSizeSlider.addEventListener('input', updateFontSize);
+});
+
+
+// Implement the actual translation function based on the API you choose
+// async function translateToArabic(text) { /* API call logic here */ }
+</script>
+
+</body>
+</html>
